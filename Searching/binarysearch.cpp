@@ -43,11 +43,12 @@ int main(){
 
     //simple and not-so-efficient linear sort. Most efficient to use Bubble Sort. Array needs to be sorted so this works for now
     for (int i = 0; i < size - 1; ++i) {
-    for (int j = 0; j < size - i - 1; ++j) {
-        if (arr[j] > arr[j + 1]) {
-            temp = arr[j];
-            arr[j] = arr[j + 1];
-            arr[j + 1] = temp;
+        for (int j = 0; j < size - i - 1; ++j) {
+            if (arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
         }
     }
 
@@ -56,7 +57,6 @@ int main(){
     for (int j = 0; j < size; j++){
         std::cout << arr[j] << std::endl;
     }
-}
 
     std::cout << "Index of searched element is: " << BinarySearch(19, arr, size) << std::endl;
     std::cout << "Index of searched element is: " << BinarySearch(1, arr, size) << std::endl;
